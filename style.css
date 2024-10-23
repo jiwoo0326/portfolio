@@ -104,7 +104,7 @@ nav ul li a:hover::after {
 .box {
     border: 1px solid white;
     padding: 50px;
-    width: 600px;
+    width: 1000px;
     height: auto;
     margin: 20px 0;
     position: relative;
@@ -113,28 +113,46 @@ nav ul li a:hover::after {
 
 .box nav {
     position: relative;
-    font-size: large;
+    font-size:25px;
     line-height: 1.8;
 }
 
-/* Profile Section */
-#profile {
-    padding: 50px 0;
-}
 
-.tabs {
+#profile {
+    padding: 80px 0;
+    
+  }
+
+  #profile .content {
+    font-size: 60px; /* 文字を大きくする */
+    font-weight: bold; /* 太字にする */
+    margin-bottom: 20px; /* 下に余白を追加 */
+  } 
+  .tabs {
     display: flex;
     margin: 20px 0 40px;
-}
-
-.links {
+  }
+  
+  .links {
     margin-right: 50px;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     position: relative;
-}
-
-.links:hover {
+  }
+  
+  .links:hover {
     color: #f39c12;
-}
+  }
+  
+  /* 初期状態ではすべてのコンテンツを非表示 */
+  .tab-content {
+    display: none;
+  }
+  
+  /* タブがアクティブのときの表示 */
+  .tab-content.active {
+    display: block;
+  }
+  
+

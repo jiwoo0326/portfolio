@@ -7,6 +7,7 @@
 
 body {
     background: #080808;
+    /*#080808*/
     color: #fff;
 }
 
@@ -16,15 +17,52 @@ body {
     padding: 10px 10%;
 }
 
-/* Header Styles */
+
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(images/cat.png);
-    background-size:contain;
-    background-position: left;
+    position: relative;
+    overflow: hidden;
+    background-color: #080808; /* Fallback background color */
+}
+.background {
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
+    top: -10%;
+    left: 20%;
+    opacity: 0; /* Start all with 0 opacity */
+}
 
+/* Background images for each section */
+.bg1 {
+    background-image: url(images/cat_body.png); /* Replace with actual image path */
+    top: 40%; /* Adjust this value to move it down */
+    left: 10%;
+    animation: moveUpDown 3s infinite alternate;
+    opacity: 1; /* Ensure it's visible during animation */
+}
+
+.bg3 {
+    background-image: url(images/meow.png); /* Replace with actual image path */
+    left: 25%;
+    animation: appearAbove 3s infinite;
+}
+
+/* Animation for bg1: Moving up and down */
+@keyframes moveUpDown {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-20px); opacity: 1; } /* Adjust value as needed */
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Animation for bg3: Appear above, then disappear */
+@keyframes appearAbove {
+    0%, 75% { opacity: 0; }
+    75%, 100% { opacity: 1; }
 }
 
 nav {
@@ -35,7 +73,8 @@ nav {
 }
 
 .logo {
-    max-width: 100px; /* ロゴのサイズを適切に調整 */
+    max-width: 170px; /* ロゴのサイズを適切に調整 */
+
 }
 
 nav ul li {
@@ -155,4 +194,5 @@ nav ul li a:hover::after {
     display: block;
   }
   
+
 

@@ -308,6 +308,13 @@ nav ul li a:hover::after {
     animation: appearAbove 3s infinite;
   }
 
+  .bg1 {
+    background-image: url(images/cat_body.png); /* Replace with actual image path */
+    left: 25%;
+    top: 40%; /* Adjust this value to bring it closer to bg1 */
+    animation: appearAbove 3s infinite;
+  }
+
   .box {
     width: auto; /* Allow boxes to take full width */
     padding: 20px; /* Reduce padding inside boxes */

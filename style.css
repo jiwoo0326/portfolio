@@ -312,7 +312,6 @@ nav ul li a:hover::after {
     background-image: url(images/cat_body.png); /* Replace with actual image path */
     left: 25%;
     top: 60%; /* Adjust this value to bring it closer to bg1 */
-    animation: appearAbove 3s infinite;
   }
 
   .box {

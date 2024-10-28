@@ -1,198 +1,269 @@
 /* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background: #080808;
-    /*#080808*/
-    color: #fff;
+  background: #080808;
+  /*#080808*/
+  color: #fff;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    padding: 10px 10%;
+  width: 80%;
+  margin: auto;
+  padding: 10px 10%;
 }
-
 
 #header {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background-color: #080808; /* Fallback background color */
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #080808; /* Fallback background color */
 }
 .background {
-    position: absolute;
-    width: 30%;
-    height: 70%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: -10%;
-    left: 20%;
-    opacity: 0; /* Start all with 0 opacity */
+  position: absolute;
+  width: 30%;
+  height: 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -10%;
+  left: 20%;
+  opacity: 0; /* Start all with 0 opacity */
 }
 
 /* Background images for each section */
 .bg1 {
-    background-image: url(images/cat_body.png); /* Replace with actual image path */
-    top: 40%; /* Adjust this value to move it down */
-    left: 10%;
-    animation: moveUpDown 3s infinite alternate;
-    opacity: 1; /* Ensure it's visible during animation */
+  background-image: url(images/cat_body.png); /* Replace with actual image path */
+  top: 40%; /* Adjust this value to move it down */
+  left: 10%;
+  animation: moveUpDown 3s infinite alternate;
+  opacity: 1; /* Ensure it's visible during animation */
 }
 
 .bg3 {
-    background-image: url(images/meow.png); /* Replace with actual image path */
-    left: 25%;
-    animation: appearAbove 3s infinite;
+  background-image: url(images/meow.png); /* Replace with actual image path */
+  left: 25%;
+  animation: appearAbove 3s infinite;
 }
 
 /* Animation for bg1: Moving up and down */
 @keyframes moveUpDown {
-    0% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(-20px); opacity: 1; } /* Adjust value as needed */
-    100% { transform: translateY(0); opacity: 1; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;
+  } /* Adjust value as needed */
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Animation for bg3: Appear above, then disappear */
 @keyframes appearAbove {
-    0%, 75% { opacity: 0; }
-    75%, 100% { opacity: 1; }
+  0%,
+  75% {
+    opacity: 0;
+  }
+  75%,
+  100% {
+    opacity: 1;
+  }
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30px;
 }
 
 .logo {
-    max-width: 170px; /* ロゴのサイズを適切に調整 */
-
+  max-width: 170px; /* ロゴのサイズを適切に調整 */
 }
 
 nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
 }
 
 nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #fff;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .header-text {
-    margin-top: 20%;
-    font-size: 60px;
-    display: flex; /* フレックスボックスを使用 */
-    flex-direction: column; /* 縦に揃える */
-    align-items: flex-end; /* コンテンツを右揃えにする */
-    text-align: right; /* テキスト自体も右揃えにする */
+  margin-top: 20%;
+  font-size: 60px;
+  display: flex; /* フレックスボックスを使用 */
+  flex-direction: column; /* 縦に揃える */
+  align-items: flex-end; /* コンテンツを右揃えにする */
+  text-align: right; /* テキスト自体も右揃えにする */
 }
 
 .header-text p {
-    margin: 0; /* 余分なマージンを除去 */
-    font-size: 70%; /* フォントサイズを調整 */
+  margin: 0; /* 余分なマージンを除去 */
+  font-size: 70%; /* フォントサイズを調整 */
 }
 
 .header-text h1 {
-    font-size: 100%; /* h1のサイズを調整 */
-    font-weight: bold;
-    margin-top: 10px; /* 余白を調整 */
+  font-size: 100%; /* h1のサイズを調整 */
+  font-weight: bold;
+  margin-top: 10px; /* 余白を調整 */
 }
-
 
 /* About Section */
 #about {
-    padding: 80px 0;
-    color: white;
+  padding: 80px 0;
+  color: white;
 }
 
 .contant {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-weight: bold;
-    font-size: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 60px;
 }
 
 .box {
-    border: 1px solid white;
-    padding: 50px;
-    width: 1000px;
-    height: auto;
-    margin: 20px 0;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.1); /* 背景の調整 */
+  border: 1px solid white;
+  padding: 50px;
+  width: 1000px;
+  height: auto;
+  margin: 20px 0;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1); /* 背景の調整 */
 }
 
 .box nav {
-    position: relative;
-    font-size:25px;
-    line-height: 1.8;
+  position: relative;
+  font-size: 25px;
+  line-height: 1.8;
 }
 
-
 #profile {
-    padding: 80px 0;
-    
-  }
+  padding: 80px 0;
+}
 
-  #profile .content {
-    font-size: 60px; /* 文字を大きくする */
-    font-weight: bold; /* 太字にする */
-    margin-bottom: 20px; /* 下に余白を追加 */
-  } 
-  .tabs {
+#profile .content {
+  font-size: 60px; /* 文字を大きくする */
+  font-weight: bold; /* 太字にする */
+  margin-bottom: 20px; /* 下に余白を追加 */
+}
+.tabs {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.links {
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.links:hover {
+  color: #f39c12;
+}
+
+/* 初期状態ではすべてのコンテンツを非表示 */
+.tab-content {
+  display: none;
+}
+
+/* タブがアクティブのときの表示 */
+.tab-content.active {
+  display: block;
+}
+
+#contact .container {
+  font-size: 60px; /* 文字を大きくする */
+  font-weight: bold; /* 太字にする */
+  margin-bottom: 20px; /* 下に余白を追加 */
+}
+#contact .contant {
     display: flex;
-    margin: 20px 0 40px;
+    flex-direction: column; /* 縦一列に並べる */
+    align-items: flex-start; /* 左揃えにする */
   }
   
-  .links {
-    margin-right: 50px;
-    font-size: 20px;
+  #contact .contant a {
+    color: #f39c12; /* カスタムリンクカラー */
+    text-decoration: none;
+    font-size: 24px;
     font-weight: bold;
-    cursor: pointer;
-    position: relative;
+    margin-bottom: 10px; /* リンク間に余白を追加 */
   }
   
-  .links:hover {
+  #contact .contant a:hover {
+    color: #fff; /* ホバー時のカラー */
+    text-decoration: underline;
+  }
+  
+  
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .contact-form label {
+    font-size: 18px;
     color: #f39c12;
   }
   
-  /* 初期状態ではすべてのコンテンツを非表示 */
-  .tab-content {
-    display: none;
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #fff;
+    background: #080808;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
   }
   
-  /* タブがアクティブのときの表示 */
-  .tab-content.active {
-    display: block;
+  .contact-form button {
+    padding: 10px 20px;
+    background: #f39c12;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
   }
   
-
-
+  .contact-form button:hover {
+    background: #fff;
+    color: #080808;
+  }
+  

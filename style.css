@@ -304,7 +304,7 @@ nav ul li a:hover::after {
   .bg3 {
     background-image: url(images/meow.png); /* Replace with actual image path */
     left: 25%;
-    top: 55%; /* Adjust this value to bring it closer to bg1 */
+    top: 40%; /* Adjust this value to bring it closer to bg1 */
     animation: appearAbove 3s infinite;
   }
 

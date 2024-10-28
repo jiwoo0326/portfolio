@@ -17,6 +17,27 @@ tabs.forEach((tab) => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.links');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      // Remove 'active' class from all links and tab contents
+      links.forEach(l => l.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
+
+      // Add 'active' class to the clicked link
+      link.classList.add('active');
+
+      // Show the corresponding tab content
+      const tabId = link.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+});
+
+
 function changeLanguage() {
   const elementsToChange = [
     ...document.querySelectorAll(

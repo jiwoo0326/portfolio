@@ -190,8 +190,14 @@ nav ul li a:hover::after {
   position: relative;
 }
 
+.links.active {
+  color: #f39c12; /* Change to the desired active color */
+  font-weight: bold; /* Make it bold or any other style you prefer */
+}
+
+/* Add hover effect to other links */
 .links:hover {
-  color: #f39c12;
+  color: #f39c12; /* Maintain hover color for all links */
 }
 
 /* 初期状態ではすべてのコンテンツを非表示 */
@@ -293,6 +299,13 @@ nav ul li a:hover::after {
 
   .header-text p {
     font-size: 60%; /* Reduce size for mobile */
+  }
+
+  .bg3 {
+    background-image: url(images/meow.png); /* Replace with actual image path */
+    left: 25%;
+    top: 55%; /* Adjust this value to bring it closer to bg1 */
+    animation: appearAbove 3s infinite;
   }
 
   .box {

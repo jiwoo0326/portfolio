@@ -184,10 +184,11 @@ nav ul li a:hover::after {
 
 .links {
   margin-right: 50px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  color: white; 
 }
 
 .links.active {
@@ -208,6 +209,30 @@ nav ul li a:hover::after {
 /* タブがアクティブのときの表示 */
 .tab-content.active {
   display: block;
+}
+/* Links in the Achievement section */
+#achievement a {
+  color: white; /* Default color for links */
+  text-decoration: none; /* Remove underlines */
+  font-size: 25px;
+  display: block; /* Ensure each link is on its own line */
+  margin-bottom: 10px; /* Add space between links */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+/* When the link is hovered */
+#achievement a:hover {
+  color: #f39c12; /* Orange color on hover */
+}
+
+/* When the link is clicked (active state) */
+#achievement a:active {
+  color: #f39c12; /* Orange color when the link is clicked */
+}
+
+/* Optional: Make the active link bold */
+#achievement a:active {
+  font-weight: bold;
 }
 
 #contact .container {
